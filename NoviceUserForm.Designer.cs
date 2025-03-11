@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 461);
+            this.ClientSize = new System.Drawing.Size(1104, 461);
             this.Name = "NoviceUserForm";
             this.Text = "Novice User Panel";
             this.ResumeLayout(false);
