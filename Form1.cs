@@ -114,20 +114,29 @@ namespace UAAVDataApp
 
         private void btnNoviceUser_Click(object sender, EventArgs e)
         {
+            this.Hide();
             NoviceUserForm noviceForm = new NoviceUserForm();
-            noviceForm.Show();
+            //noviceForm.Show();
+            noviceForm.FormClosed += (s, args) => this.Show();
+            noviceForm.ShowDialog();
         }
 
         private void btnExpertUser_Click(object sender, EventArgs e)
         {
-            ExpertUserForm expertForm = new ExpertUserForm();
-            expertForm.Show();
+            this.Hide();
+            ExpertUserForm expertForm = new ExpertUserForm(dbPath);
+            //expertForm.Show();
+            expertForm.FormClosed += (s, args) => this.Show();
+            expertForm.ShowDialog();
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            AdminLoginForm adminForm = new AdminLoginForm();
-            adminForm.Show();
+            this.Hide();
+            AdminLoginForm adminForm = new AdminLoginForm(dbPath);
+            //adminForm.Show();
+            adminForm.FormClosed += (s, args) => this.Show();
+            adminForm.ShowDialog();
         }
 
         //private void UpdateButtonStates()
